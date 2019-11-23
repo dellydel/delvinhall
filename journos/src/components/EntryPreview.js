@@ -13,6 +13,6 @@ const useStyles = makeStyles(theme => ({
 export default function HeaderNav() {
     const classes = useStyles();
     return (
-        <Paper className={classes.paper}>size 8 left</Paper>
+        <Paper className={classes.paper}>size 9 left</Paper>
     );
 }

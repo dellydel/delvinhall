@@ -45,9 +45,11 @@ module.exports = {
             PUBLIC_URL: '/public'
         }),
         new CopyWebpackPlugin(
-            ['src/manifest.webmanifest'], {
+            [ {
+                from: 'src/manifest.webmanifest',
+                to: 'public/manifest.json',
                 ignore: ['.DS_Store']
-            }
+            }]
         )
     ]
 };
