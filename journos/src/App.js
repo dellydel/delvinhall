@@ -1,16 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import HeaderNav from './components/HeaderNav';
+import EntryPreview from './components/EntryPreview';
+import CategoryMenu from './components/CategoryMenu';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        flexGrow: 1,
+        padding: theme.spacing(3),
+    },
+    gridContainer: {
+        paddingTop: theme.spacing(2),
+    }
+}));
 
 function App() {
-  return (
-    <div>
-      <header>
-        
-      </header>
-      <div>JOURNO</div>
-    </div>
-  );
+    const classes = useStyles();
+    return (
+        <div className={classes.root}>
+            <HeaderNav></HeaderNav>
+            <CategoryMenu></CategoryMenu>
+            <div className={classes.gridContainer}>
+                <Grid container spacing={3}>
+                    <Grid item xs={8}>
+                        <EntryPreview></EntryPreview>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <div className={classes.paper}>TODO: right hand side content</div>
+                    </Grid>
+                </Grid>
+            </div>
+        </div>
+    );
 }
 
 export default App;
