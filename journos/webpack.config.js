@@ -18,44 +18,34 @@ module.exports = {
     },
     module: {
         rules: [{
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: ['babel-loader']
-            },
-            {
-                test: /\.(css|scss)$/,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ]
-            }, {
-                test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-                loaders: [
-                    'file-loader'
-                ]
-            }
+            test: /\.(js|jsx)$/,
+            exclude: /node_modules/,
+            use: ['babel-loader']
+        },
+        {
+            test: /\.(css|scss)$/,
+            use: [
+                "style-loader",
+                "css-loader",
+                "sass-loader"
+            ]
+        }, {
+            test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+            loaders: [
+                'file-loader'
+            ]
+        }
         ]
     },
     plugins: [
-<<<<<<< HEAD
-        new HtmlWebpackPlugin({ template: path.join(__dirname, 'src', 'index.html') }),
-=======
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'index.html')
         }),
->>>>>>> 879f1b8a08fa874e6314fe0491726a17804c61ae
         new InterpolateHtmlPlugin({
             PUBLIC_URL: '/public'
         }),
         new CopyWebpackPlugin(
-<<<<<<< HEAD
-            ['src/manifest.webmanifest'],
-            { ignore: ['.DS_Store'] })
-    ]
-};
-=======
-            [ {
+            [{
                 from: 'src/manifest.webmanifest',
                 to: 'public/manifest.json',
                 ignore: ['.DS_Store']
@@ -63,4 +53,3 @@ module.exports = {
         )
     ]
 };
->>>>>>> 879f1b8a08fa874e6314fe0491726a17804c61ae
