@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "journos",
   "version": "0.1.0",
   "description": "Demonstration of journos library",
@@ -54,3 +55,59 @@
     "webpack-dev-server": "3.9.0"
   }
 }
+=======
+    "name": "journos",
+    "version": "0.1.0",
+    "description": "Demonstration of journos library",
+    "private": true,
+    "main": "index.js",
+    "dependencies": {
+        "@material-ui/core": "4.6.0",
+        "@material-ui/icons": "4.5.1",
+        "react": "16.11.0",
+        "react-dom": "16.11.0",
+        "react-scripts": "3.2.0"
+    },
+    "scripts": {
+        "startreact": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "webpack": "babel-node ./node_modules/webpack/bin/webpack",
+        "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "7.7.2",
+        "@babel/node": "7.7.0",
+        "@babel/preset-env": "7.7.1",
+        "@babel/preset-react": "7.7.0",
+        "babel-loader": "8.0.6",
+        "copy-webpack-plugin": "5.0.5",
+        "css-loader": "3.2.0",
+        "html-webpack-plugin": "3.2.0",
+        "interpolate-html-plugin": "3.0.0",
+        "node-sass": "4.13.0",
+        "path": "0.12.7",
+        "sass-loader": "8.0.0",
+        "style-loader": "1.0.0",
+        "webpack": "4.41.2",
+        "webpack-cli": "3.3.10",
+        "webpack-dev-server": "3.9.0"
+    }
+}
+>>>>>>> 879f1b8a08fa874e6314fe0491726a17804c61ae

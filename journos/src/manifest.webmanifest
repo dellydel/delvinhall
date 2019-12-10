@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "short_name": "Journo",
   "name": "Journo",
   "icons": [
@@ -23,3 +24,12 @@
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
+=======
+    "short_name": "Journos",
+    "name": "Journos",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
+>>>>>>> 879f1b8a08fa874e6314fe0491726a17804c61ae
