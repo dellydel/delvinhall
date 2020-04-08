@@ -3,11 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1
     },
@@ -25,23 +25,24 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function HeaderNav() {
-    const classes = useStyles();
-
+const HeaderNav = () => {
+    const styles = useStyles();
     return (
-        <div className={classes.root}>
-            <AppBar position="static" color="default" className={classes.appBar}>
+        <div className={styles.root}>
+            <AppBar position="static" color="default" className={styles.appBar}>
                 <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <IconButton edge="start" className={styles.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" className={classes.title}>
+                    <Typography variant="h6" className={styles.title}>
                         JOURNOS.js
                     </Typography>
-                    <Button color="inherit" className={classes.button}>Login</Button>
-                    <Button color="inherit" className={classes.button}>Register</Button>
+                    <Button color="inherit" className={styles.button}>Admin</Button>
+                    <Button color="inherit" className={styles.button}>Register</Button>
                 </Toolbar>
             </AppBar>
         </div>
     );
 }
+
+export default HeaderNav;

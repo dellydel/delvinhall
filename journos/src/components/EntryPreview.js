@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function HeaderNav() {
+export default function HeaderNav(props) {
     const classes = useStyles();
     return (
         <Paper className={classes.paper}>
