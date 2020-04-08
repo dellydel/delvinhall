@@ -15,8 +15,7 @@ const styles = theme => ({
     }
 });
 
-class Blog extends React.Component {
-    render() {
+const Blog = (props) =>  {
         return (
             <div>
                 <CategoryMenu></CategoryMenu>
@@ -32,14 +31,13 @@ class Blog extends React.Component {
                     </Grid>
                 </div>
                 <div className={styles.buttonGroup}>
-                    <button onClick={()=>{this.onGetText}}>Get Text</button>
-                    <button onClick={()=>{this.onFormatSelectedText}}>Format Selected Text</button>
-                    <button onClick={()=>{this.onMakeSelectionLink}}>Make Selection Link</button>
-                    <button onClick={()=>{this.onMakeParagraphLink}}>Make Paragraph Link</button>
+                    <button onClick={props.onGetText}>Get Text</button>
+                    <button onClick={()=> props.onFormatSelectedText("blue")}>Format Selected Text</button>
+                    <button onClick={props.onMakeSelectionLink}>Make Selection Link</button>
+                    <button onClick={props.onMakeParagraphLink}>Make Paragraph Link</button>
                 </div>
             </div>
         )
     }
-}
 
 export default withStyles(styles)(Blog);
