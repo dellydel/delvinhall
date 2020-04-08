@@ -4,11 +4,11 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        textAlign: "center",
         padding: theme.spacing(2),
         color: theme.palette.text.secondary,
     },
     tags: {
+        paddingLeft: theme.spacing(10),
         listStyleType: "none"
     },
     tagItem: {
