@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 
 import HeaderNav from './HeaderNav';
@@ -19,6 +19,14 @@ const styles = theme => ({
 document.title = 'Journos';
 
 class Journos extends React.Component {
+    constructor(props){
+        super(props);
+    }
+
+    toUsers() {
+        this.props.history.push('../journos/users');
+    }
+
     getText() {
         var selectedText = getSelectedText();
         if (selectedText.length) {
@@ -85,25 +93,25 @@ class Journos extends React.Component {
     render() {
         return (
             <div className={styles.root}>
-                <HeaderNav/>
+                <HeaderNav onToUsers={() => {this.toUsers()}}/>
                 <AdBar/>
                 <Switch>
-                    <Route path={"/blog"}>
+                    <Route path={`${this.props.match.path}/blog`}>
                         <Blog onGetText={this.getText}
                             onFormatSelectedText={this.formatSelectedText}
                             onMakeSelectionLink={this.makeSelectionLink}
                             onMakeParagraphLink={this.makeParagraphLink}/>
-                    </Route>
-                    <Route path={"/users"}>
+                    </Route> */}
+                    <Route path={`${this.props.match.path}/users`}> 
                         <Users/>
-                    </Route>
-                    <Route path={"/"}>
+                    </Route> 
+                    <Route path={`${this.props.match.path}`}>
                         <Blog onGetText={this.getText}    
                             onFormatSelectedText={this.formatSelectedText}                        onFormatText={this.formatSelectedText}
                             onMakeSelectionLink={this.makeSelectionLink}
                             onMakeParagraphLink={this.makeParagraphLink}/>
                     </Route>
-                </Switch> 
+                </Switch>
             </div>
         )
     }

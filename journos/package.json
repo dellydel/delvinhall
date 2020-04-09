@@ -7,6 +7,8 @@
   "dependencies": {
     "@material-ui/core": "4.6.0",
     "@material-ui/icons": "4.5.1",
+    "ag-grid-community": "^23.0.2",
+    "ag-grid-react": "^23.0.3",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-router": "^5.1.2",
@@ -46,7 +48,7 @@
     "css-loader": "3.2.0",
     "html-webpack-plugin": "3.2.0",
     "interpolate-html-plugin": "3.0.0",
-    "node-sass": "4.13.0",
+    "node-sass": "^4.13.1",
     "path": "0.12.7",
     "sass-loader": "8.0.0",
     "style-loader": "1.0.0",

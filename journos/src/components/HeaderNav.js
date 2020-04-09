@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
+import { withRouter } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const HeaderNav = () => {
+const HeaderNav = (props) => {
     const styles = useStyles();
     return (
         <div className={styles.root}>
@@ -37,7 +38,7 @@ const HeaderNav = () => {
                     <Typography variant="h6" className={styles.title}>
                         JOURNOS.js
                     </Typography>
-                    <Button color="inherit" className={styles.button}>Admin</Button>
+                    <Button color="inherit" onClick={() => {props.history.push('../journos/users')}} className={styles.button}>Admin</Button>
                     <Button color="inherit" className={styles.button}>Register</Button>
                 </Toolbar>
             </AppBar>
@@ -45,4 +46,4 @@ const HeaderNav = () => {
     );
 }
 
-export default HeaderNav;
+export default withRouter(HeaderNav);
