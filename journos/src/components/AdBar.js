@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function AdBar() {
+const AdBar = () => {
     const classes = useStyles();
     return ( 
         <div className = { classes.root }>
@@ -20,3 +20,5 @@ export default function AdBar() {
         </div>
     );
 }
+
+export default AdBar;

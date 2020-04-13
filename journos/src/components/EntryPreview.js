@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
+import Journos from 'journos.dev.js';
+
 
 const useStyles = makeStyles(theme => ({
     paper: {
@@ -13,12 +15,18 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function HeaderNav(props) {
+const EntryPreview = (props) => {
     const classes = useStyles();
+    useEffect(() => {
+        Journos.init({
+            selector: ".challengeText", 
+            event: "mouseup"
+        });
+    }, []);
     return (
         <Paper className={classes.paper}>
             <h3>SIZE NINE LEFT</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a semper turpis.
+            <p className="challengeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a semper turpis.
                 Morbi ultrices nulla ut aliquet gravida. Cras ac lobortis dui. Curabitur elementum
                 risus id massa aliquet, et sollicitudin turpis efficitur. Nunc fermentum venenatis
                 tincidunt. Integer nec imperdiet urna, ac tincidunt lacus. Duis id mollis sem,
@@ -34,3 +42,5 @@ export default function HeaderNav(props) {
         </Paper>
     );
 }
+
+export default EntryPreview;

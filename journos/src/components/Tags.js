@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function Tags() {
+const Tags = () => {
     const classes = useStyles();
     return (
         <Paper className={classes.root}>
@@ -34,3 +34,5 @@ export default function Tags() {
         </Paper>
     );
 }
+
+export default Tags;

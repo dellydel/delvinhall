@@ -1,5 +1,6 @@
 
 export default class {
+    
     static getText() {
         var selectedText = ""
         if (window.getSelection) {
@@ -57,5 +58,27 @@ export default class {
         alert('text formatted: ' + text);
     }
 
+    static init(options){
+        window.onload = function() {
+            document.querySelectorAll(options.selector).forEach(element => {
+                element.addEventListener(options.event, () => {
+                    let selectedText = "";
+                    if (window.getSelection) {
+                        selectedText = window.getSelection().toString();
+                    }
+                    else if (document.getSelection) {
+                        selectedText = document.getSelection();
+                    }
+                    else if (document.selection) {
+                        selectedText =
+                            document.selection.createRange().text;
+                    }
+                    if (selectedText.length) {
+                        alert(selectedText);
+                    }
+                })
+            })
+        }
+    }
 }
 

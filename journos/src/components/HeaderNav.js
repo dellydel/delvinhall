@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
     },
     appBar: {
         minHeight: 74
+    },
+    home: {
+        cursor: "pointer"
     }
 }));
 
@@ -36,7 +39,7 @@ const HeaderNav = (props) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" className={styles.title}>
-                        JOURNOS.js
+                        <span className={styles.home} onClick={() => {props.history.push('../journos/')}}>JOURNOS.js</span>
                     </Typography>
                     <Button color="inherit" onClick={() => {props.history.push('../journos/users')}} className={styles.button}>Admin</Button>
                     <Button color="inherit" className={styles.button}>Register</Button>

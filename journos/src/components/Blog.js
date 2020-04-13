@@ -16,28 +16,28 @@ const styles = theme => ({
 });
 
 const Blog = (props) =>  {
-        return (
-            <div>
-                <CategoryMenu></CategoryMenu>
-                <div className={styles.gridContainer}>
-                    <Grid container spacing={3}>
-                        <Grid item xs={9}>
-                            <EntryPreview></EntryPreview>
-                            <EntryPreview></EntryPreview>
-                        </Grid>
-                        <Grid item xs={3}>
-                            <Tags></Tags>
-                        </Grid>
+    return (
+        <div>
+            <CategoryMenu></CategoryMenu>
+            <div className={styles.gridContainer}>
+                <Grid container spacing={3}>
+                    <Grid item xs={9}>
+                        <EntryPreview></EntryPreview>
+                        <EntryPreview></EntryPreview>
                     </Grid>
-                </div>
-                <div className={styles.buttonGroup}>
-                    <button onClick={props.onGetText}>Get Text</button>
-                    <button onClick={()=> props.onFormatSelectedText("blue")}>Format Selected Text</button>
-                    <button onClick={props.onMakeSelectionLink}>Make Selection Link</button>
-                    <button onClick={props.onMakeParagraphLink}>Make Paragraph Link</button>
-                </div>
+                    <Grid item xs={3}>
+                        <Tags></Tags>
+                    </Grid>
+                </Grid>
             </div>
-        )
-    }
+            <div className={styles.buttonGroup}>
+                <button onClick={props.onGetText}>Get Text</button>
+                <button onClick={()=> props.onFormatSelectedText("blue")}>Format Selected Text</button>
+                <button onClick={props.onMakeSelectionLink}>Make Selection Link</button>
+                <button onClick={props.onMakeParagraphLink}>Make Paragraph Link</button>
+            </div>
+        </div>
+    )
+}
 
 export default withStyles(styles)(Blog);

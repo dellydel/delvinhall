@@ -27,7 +27,7 @@ class JournosMain extends React.Component {
     render() {
         return (
             <div className={styles.root}>
-                <HeaderNav onToUsers={() => {this.toUsers()}}/>
+                <HeaderNav/>
                 <AdBar/>
                 <Switch>
                     <Route path={`${this.props.match.path}/blog`}>

@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function CategoryMenu() {
+const CategoryMenu =() => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
@@ -25,3 +25,5 @@ export default function CategoryMenu() {
         </div>
     );
 }
+
+export default CategoryMenu;
