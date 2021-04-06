@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import JournosMain from './components/JournosMain';
+import AllOut from './components/all-out/AllOut'
 // import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -11,6 +12,7 @@ ReactDOM.render(
         <div>
             <Route exact path={"/"} component={App} />
             <Route path={"/journos"} component={JournosMain} />
+            <Route path={"/all-out"} component={AllOut} />
         </div>
     </BrowserRouter>, document.getElementById('root'));
 
