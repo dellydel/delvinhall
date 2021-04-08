@@ -1,33 +1,30 @@
 import React, { Fragment } from "react";
-import dessert from 'assets/all-out/dessert.png'
+import dessert from '../../assets/all-out/dessert.png'
 import { makeStyles, Button } from "@material-ui/core";
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(() => ({
     root: {
-       height: "500px",
+       height: "400px",
        backgroundImage: `url(${dessert})`,
+       backgroundSize: "450px",
        backgroundRepeat: "no-repeat",
        borderRadius: 8,
        backgroundPosition: "right",
-       paddingLeft: "15%",
-       paddingRight: "15%",
        textAlign: "left",
-       marginRight: "15%"
     },
     heroHeader: {
-        paddingTop: "105px",
-        fontFamily: "Open Sans, sans-serif",
+        paddingTop: "85px",
+        fontFamily: "Montserrat Alternates, sans-serif",
         fontWeight: 700,
         fontSize: "65px",
     },
-    allOutButton: {
-        marginTop:"5px",
-        textTransform: "uppercase",
-    },
+
     heroText: {
-        marginTop: "20px",
-        marginBottom: "30px",
+        marginTop: "10px",
         width: "50%",
+        fontSize: "20px",
+        padding: "6px"
     }
 }));
 
@@ -36,9 +33,11 @@ const HeroBar = () => {
     return (
         <Fragment>
             <div className={root}>
-            <div className={heroHeader}>[All Out Catering<br/>Motto Here]</div>
-            <p className={heroText}>a sem ut, fringilla malesuada risus. Sed blandit enim eget nisi fringilla hendrerit. Etiam vitae velit interdum, lobortis est quis, rhoncus libero. Vivamus lobortis ipsum sed ex luctus, sit amet ullamcorper dolor ultrices.</p>
-            <Button variant="contained" color="primary" className={allOutButton} size="large">
+            <div className={heroHeader}>All Out Catering</div>
+            <Typography variant="body2" color="textSecondary" component="p" className={heroText}>
+                We love catering your special event. Your every demand and every need is catered. Every dish will be created at it's best. The food you eat should be perfect and this is our responsibility.
+            </Typography>
+            <Button color="primary" className={allOutButton}>
                 View Our Services
             </Button>
             </div>

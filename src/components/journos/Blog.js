@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import '../../App.css';
 import EntryPreview from './EntryPreview';
 import CategoryMenu from './CategoryMenu';
 import Tags from './Tags';

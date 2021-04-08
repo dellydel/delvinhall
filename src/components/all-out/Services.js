@@ -1,27 +1,20 @@
 import React, { Fragment } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import e1 from "assets/all-out/e1.jpg";
-import e2 from "assets/all-out/e2.jpg";
-import e3 from "assets/all-out/e3.jpg";
+import e1 from "../../assets/all-out/e1.jpg";
+import e2 from "../../assets/all-out/e2.jpg";
+import e3 from "../../assets/all-out/e3.jpg";
 import Grid from "@material-ui/core/Grid";
-
 import ServiceCard from "./ServiceCard";
 
 const useStyles = makeStyles({
   root: {
-    paddingLeft: "15%",
-    paddingRight: "15%",
+    marginBottom: "50px",
   },
   servicesHeader: {
-    paddingLeft: "15%",
-    paddingRight: "15%",
     textAlign: "left",
-    fontFamily: "Open Sans, sans-serif",
+    fontFamily: "Montserrat Alternates, sans-serif",
     fontWeight: 700,
     fontSize: "45px",
-    marginTop:"100px",
-    marginBottom:"25px",
-
   }
 });
 
@@ -29,7 +22,7 @@ const Services = () => {
   const classes = useStyles();
   return (
     <Fragment>
-    <div className={classes.servicesHeader}>Services</div>
+    <h2 className={classes.servicesHeader}>Services</h2>
       <Grid
         className={classes.root}
         container
@@ -57,9 +50,6 @@ const Services = () => {
           serviceText="Sed blandit enim eget nisi fringilla hendrerit. Etiam vitae velit interdum"
           serviceImgPath={e3}/>
         </Grid>
-       
-       
-        
       </Grid>
     </Fragment>
   );

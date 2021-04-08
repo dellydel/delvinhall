@@ -6,7 +6,8 @@ const useStyles = makeStyles(() => ({
        backgroundColor: "#282c34",
        color: "#FFF",
        paddingLeft: "60px",
-       paddingRight: "60px"
+       paddingRight: "60px",
+       marginBottom: "50px"
     },
     menuButton: {
         fontFamily: "Open Sans, sans-serif",
@@ -16,7 +17,7 @@ const useStyles = makeStyles(() => ({
         color: "#FFFFFF"
     },
     brand: {
-        fontFamily: "Open Sans, sans-serif",
+        fontFamily: "Montserrat Alternates, sans-serif",
         fontWeight: 700,
     },
     toolbar: {
@@ -28,8 +29,7 @@ const useStyles = makeStyles(() => ({
 const Header = () => {
     const { header, menuButton, brand, toolbar } = useStyles();
     return (
-        <header>
-            <AppBar className={header}>
+            <AppBar position="fixed" className={header}>
                 <Toolbar className={toolbar}>
                    <h2 className={brand}>All Out Catering</h2> 
                     <div>
@@ -39,14 +39,6 @@ const Header = () => {
                     </div>
                 </Toolbar>
             </AppBar>
-            {/* <nav className="header-links">
-            <ul>
-                <li>Contact</li>
-                <li>About</li>
-                <li>Menu</li>
-            </ul>
-            </nav> */}
-        </header>
     )
 }
 

@@ -15,7 +15,10 @@ const useStyles = makeStyles({
     media: {
       height: 280,
     },
-
+    serviceFont: {
+      fontSize: "20px",
+      textAlign: "left"
+    }
   });
 
 const ServiceCard = (props) => {
@@ -34,14 +37,14 @@ return (
           <Typography gutterBottom variant="h5" component="h2">
             {serviceName}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.serviceFont}>
             {serviceText}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button variant="contained" size="small" color="primary">
-          Learn More
+        <Button size="small" color="primary">
+          Learn More...
         </Button>
       </CardActions>
     </Card>

@@ -4,8 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AgGridReact} from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
-
-import useData from 'Data';
+import useData from '../../Data';
 
 const useStyles = makeStyles(theme => ({
     grid: {
